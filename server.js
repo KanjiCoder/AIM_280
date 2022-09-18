@@ -7286,7 +7286,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                 );;;;;;;;;;;;;;;;;;;;;;;;;;;     // [278]
                                                                  // [---]
                             }else                                // [280]
-                            if( u_1 == u_bu3 ){                  // [280]
+                            if( u_bu3 >= u_1 ){                  // [280]
                                 if( u_1 == u_bit ){              // [280]
                                     f_stg.r = f_stg.r / 2.0 ;    // [280]
                                     f_stg.g = f_stg.g / 2.0 ;    // [280]
@@ -28254,17 +28254,17 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                 
-    [280] : Composited :...:                     ::::::::::::::
-          : :::::::::::: 1 : Bluge Out           ::::::::::::::
-          : :::::::::::: 2 : No Bulge            ::::::::::::::
-          : :::::::::::: 3 : Bluge In            ::::::::::::::
-          :                                      ::::::::::::::
-          : All on top of each other. Used       ::::::::::::::
-          : "BulgeOut" for base colors.          ::::::::::::::
-          : Resultant tiles have an interesting  ::::::::::::::
-          : "inner drop shadow" look to them.    ::::::::::::::
-          :                                      ::::::::::::::
-          : NEXT: Shader Optimizations.          ::::::::::::::
+    [280] : Composited :...:                     ::::::::::::::  // [280]
+          : :::::::::::: 1 : Bluge Out ( base image      ) ::::  // [280]
+          : :::::::::::: 2 : No Bulge  ( Darken Layer #1 ) ::::  // [280]
+          : :::::::::::: 3 : Bluge In  ( Darken Layer #2 ) ::::  // [280]
+          :                                      ::::::::::::::  // [280]
+          : All on top of each other. Used       ::::::::::::::  // [280]
+          : "BulgeOut" for base colors.          ::::::::::::::  // [280]
+          : Resultant tiles have an interesting  ::::::::::::::  // [280]
+          : "inner drop shadow" look to them.    ::::::::::::::  // [280]
+          :                                      ::::::::::::::  // [280]
+          : NEXT: Shader Optimizations.          ::::::::::::::  // [280]
           
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
